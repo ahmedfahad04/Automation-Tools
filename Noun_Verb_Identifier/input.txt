@@ -1,0 +1,118 @@
+The system consists of eight major modules, which are:
+User Account Creation
+Login Process
+Password Recovery
+Change Password
+2-Factor Authentication
+Dashboard
+Appointment System
+Disease Prediction
+
+3.1 User Account Creation
+Since “Online Doctor” is an automated system, all the people who receive service have to hold a designated unique profile or a guest profile, which will be considered as their account through which they can continue and communicate with the system for any type of procedures. The profile will be of four types according to users’ perspective in this system: doctors, patients, admin and guest user.
+
+3.1.1 Doctors Profile Sign Up
+A doctor will initially visit the website. S/he must first register if this is his/her first time accessing as a doctor. S/he will enter a username, name, parent name, doctor's registration number, his/her doctor's degree (certificate), specialization, photo, gender, phone number, email address, address, and chamber address etc. and then press the submit button, which will direct him/her to an interface where s/he must provide OTP (sent to the phone number/email address) and then provide a strong password, which needs to contain the followings:
+At least 8 characters
+A combination of uppercase and lowercase letters, numbers and symbols.
+Once a doctor provides all information correctly, then his/her verification will be performed by admin. After verification his/her sign up will be completed and a notification will be sent to his/her email address that s/she is a registered doctor now.
+
+3.1.2 Patients Profile Sign Up
+A patient can access the website in two ways. First as a registered patent, second as a guest user. If a patient login as a guest user then s/he will only have access to disease prediction option and all doctors list. But if s/he wants to be registered, then s/he will enter a username, name, father name, mother name, photo, phone number or email address, gender, age and then press the submit button, which will direct him/her to an interface where s/he must provide OTP (sent to the phone number or email address) and then provide a strong password. Once a patient provides all information correctly, his/her sign up will be completed and s/he will be redirected to the dashboard.
+
+3.1.3 Admin Profile Setup
+The developer team will create an account for the first admin with an username and a one-time
+password. Admin also has to provide a new password and a phone number, email address when he logs in the first time. If the admin is changed later, the previous admin will hand
+over his account credentials to the new admin.
+
+
+
+3.2 Login Process
+Going to the “Login” section, a user has to enter his/her username & password and select the user type from the dropdown box in the login interface, and then press the Sign In button. If the provided credentials do not match the account credentials stored in the database, a message stating that “Given credentials do not match” will be displayed, and he will be asked to provide valid credentials. If the provided credentials match, the system will check in the database whether the account’s 2 factor authentication is ON or OFF. If it is ON, an OTP will be sent to the registered phone number. Upon providing OTP correctly, the user will be redirected to the dashboard but if the 2 factor authentication is OFF then the user will be redirected to the dashboard without any OTP check.
+
+
+
+3.3 Password Recovery
+When a user forgets the password of his/her account, s/he can click on the ‘Forget Password?’ button. It will redirect him/her to an interface where s/he will provide the username and then an OTP will be sent to the registered phone number/email address. When s/he enters the correct OTP in the interface, a password reset interface will appear where s/he will be asked to provide a new password and confirm this newly provided password. The provided password will then be matched with the password strength criteria. If the password matches the criteria then the system will store the new password in the corresponding database. Once the password reset is completed, a message saying “Password reset successfully” will be displayed, and the user will be redirected to the login interface.
+
+
+
+3.4 Change Password
+After successful login, If a user wants to change his password from the dashboard, s/he will go to the change password section where the system will ask him/her to provide the old password. After providing the password the system will check whether the provided password is valid or not. If valid then the system will allow the user to change his password according to the password strength criteria and store the new password in the corresponding database.
+3.5 2-Factor Authentication
+After Successful Login a user will be directed to his account’s dashboard from where s/he can
+ON/OFF his 2 factor authentication.
+
+If user wants to ON 2 factor authentication s/he will press turn on 2 factor authentication.Then system will send an OTP to the registered phone number and redirect the user to an interface where the user will provide the OTP.If the provided OTP is correct, system will turn on the 2 factor authentication, save the authentication status in the corresponding database and send a notification to the user’s dashboard.
+
+If the user wants to turn off 2 factor authentication s/he will press the turn off 2 factor authentication option. Then the system will ask the user to provide his account’s password. On successful authentication,the system will send an OTP to the registered phone number and redirect the user to an interface where the user will provide the OTP. If the provided OTP is correct, the system will turn off the 2 factor authentication, save the authentication status in the corresponding database and send a notification to the user’s dashboard.
+
+
+3.6 Appointment System
+A patient will book an appointment from the dashboard. For this s/he has to click on the book appointment button and then s/he redirect the user to an interface where s/he will provide the type of doctor s/he wants to get an appointment. Then a list of doctors available on the criteria will be shown with their degree. The patient will select a doctor which will redirect him/her to that doctor’s profile and there s/he can see the appointment related information and can get an appointment by providing his/her authentication. This appointment notification will be sent to the doctors notification box.
+
+A Doctor can see all his/her appointment list in the appointment section where if s/he wants to refuse an appointment, s/he can do that and the appointment refused notification will be sent to the patient notification box. 
+
+A patient can see all his/her appointment records in the appointment section where if s/he wants to cancel an appointment, s/he can do that and the appointment cancel notification will be sent to the doctor notification box. There will be a reminder for the patient for his appointment.
+
+
+
+3.7 Dashboard
+
+3.7.1 Doctor Dashboard
+
+Edit Information
+A doctor can update his information, upload a photo, and change his password in this section.
+Complaints & Feedback
+A doctor will find two types of complaint options: patients and system. His/her complaint will be received by the admin and if any complaint submitted by a doctor is resolved, that doctor will be able to view it in the Feedback section.
+
+Two-Factor Authentication
+S/he can turn on or off two-factor authentication in this section.
+
+Appointments
+Here a doctor can see all his/her appointments in a list format which will be sorted by date and his/her chamber and if s/he wants to refuse an appointment s/he can do this in this section by providing his/her verification.
+
+View All Doctor
+Here a doctor can see all doctors registered on this website.
+
+Patients Records
+A doctor can his appointed patients previous records from the appointment list. 
+
+Delete Account
+A doctor can delete his/her account by providing his her verification.
+
+
+
+3.7.2 Patient Dashboard
+Edit Information, Complaints & Feedback, Two-Factor Authentication, Appointments, View All Doctor, Delete Account
+Same as a doctor.
+
+
+3.7.3 Admin Dashboard
+Edit Information
+Admin can update his /her email and password in this section.
+
+Complaints & Feedback
+Admin can see all complaints and if any complaint is resolved, then s/he will post that complaint feedback which will be notified to the user via notification box in his/her dashboard and email.
+
+Two-Factor Authentication
+Admin can turn on or off two-factor authentication in this section.
+
+
+View Records
+Admin can view all patients and doctor lists in the database.
+
+Remove User Account
+If the admin finds any dishonest or frequently complained account, s/he can take a decision to remove that user account. 
+
+Upload and Update Disease and Syndrome List
+Admin can update and upload Disease and Syndrome list through this section.
+
+Upload and Update Medicine Suggestion List
+Admin can update and upload medicine suggestion lists through this section.
+
+Verify User Account
+Admin will verify a doctor registration manually and System will send a notification to the doctor that his/her account is Verified. So that only authenticated doctors can be registered.
+
+3.8 Disease Prediction
+A patient or guest user can predict his/her disease and get medicine suggestions by providing his/her current health conditions, gender and age. System will try to detect his/her disease and give a list of medicines associated with the disease. System will also store the records (for registered patients) for further prediction.
