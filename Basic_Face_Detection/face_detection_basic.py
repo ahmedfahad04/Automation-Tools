@@ -18,10 +18,13 @@ while True:
     for x,y,w,h in face:
         img = cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 3)
         cv2.imwrite('face.jpg', img)
-        
-    cv2.imshow('Capturing', frame)
+            
     
+    cv2.imshow('Video', frame)
+    key = cv2.waitKey(1)
     
+    if key == ord('q'):
+        break
     
     
 video.release()
