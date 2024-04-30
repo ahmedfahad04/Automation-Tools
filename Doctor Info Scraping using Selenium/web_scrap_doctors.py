@@ -32,7 +32,7 @@ for card_body in card_bodies:
     
     # if i < 100:
         
-    # Extract relevant information from each card-body
+    # Extract relevant information from heach card-body
     doctor_name = card_body.find_element(By.CLASS_NAME, 'card-title').text
     expertise_info = card_body.find_element(By.XPATH, './/div[@style="font-size: 10px;"]').text
     branch = card_body.find_element(By.XPATH, './/span[@class="text-color-primary"]').text
